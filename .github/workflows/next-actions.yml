@@ -25,7 +25,6 @@ jobs:
         run: |
           cd cours-cesi-cicd
           npm run build
-          npm run start
 
   # test:
   #   runs-on: ubuntu-latest
