@@ -31,10 +31,12 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_NAME }}@${{ secrets.SSH_HOST }}
 
-      - name: Execute commands on EC2 instance
+      - name: Install pm2
         run: npm install pm2 -g
+      - name: Build project
         run: npm run build
         run: ls
+      - name: Start project
         run: pm2 start npm -- start
 
   # test:
