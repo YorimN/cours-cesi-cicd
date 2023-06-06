@@ -19,8 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-
-
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.8.0
         with:
@@ -34,7 +32,6 @@ jobs:
         run: npm install pm2 -g
       - name: Build project
         run: npm run build
-        run: ls
       - name: Start project
         run: pm2 start npm -- start
 
