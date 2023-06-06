@@ -32,10 +32,10 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_NAME }}@${{ secrets.SSH_HOST }}
 
       - name: Execute commands on EC2 instance
-        run: |
-          npm install pm2 -g
-          npm run build
-          pm2 start npm -- start
+        run: npm install pm2 -g
+        run: npm run build
+        run: ls
+        run: pm2 start npm -- start
 
   # test:
   #   runs-on: ubuntu-latest
