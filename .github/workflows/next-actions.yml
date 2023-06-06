@@ -23,8 +23,8 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_NAME }}@${{ secrets.SSH_HOST }}
       - name: Execute commands on EC2 instance
         run: |
-          cd cours-cesi-cicd
           npm run build
+          npm run start
 
   # test:
   #   runs-on: ubuntu-latest
