@@ -24,7 +24,6 @@ jobs:
       - name: Execute commands on EC2 instance
         run: |
           npm run build
-          npm run start
 
   # test:
   #   runs-on: ubuntu-latest
