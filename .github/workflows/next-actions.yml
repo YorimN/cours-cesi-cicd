@@ -20,7 +20,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: SSH into EC2 instance
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_NAME }}@${{ secrets.SSH_HOST }}
       - name: Execute commands on EC2 instance
         run: |
           cd cours-cesi-cicd
